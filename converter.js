@@ -25,7 +25,7 @@ module.exports = {
 
         var vmapPaths = {};
         dom.children.forEach(function (path, i) {
-            if (path.name != "path" || !path.attr.d) {
+            if (path.name !== "path" || !path.attr.d) {
                 return;
             }
             vmapPaths["path-" + i] = {
