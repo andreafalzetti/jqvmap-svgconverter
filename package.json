@@ -4,12 +4,17 @@
   "description": "",
   "main": "converter.js",
   "scripts": {
-    "test": "echo \"Warning: no test specified\""
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "svg-flatten": "file:../svg-flatten",
     "xmldoc": "^0.5.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-properties": "^1.2.1",
+    "mocha": "^2.4.5"
   }
 }
