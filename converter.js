@@ -2,10 +2,12 @@ var xmldoc = require('xmldoc');
 var svgflatten = require('svg-flatten');
 
 module.exports = {
-    convertString: function (_svg) {
-        // parse and flatten source svg
-        var _dom = new xmldoc.XmlDocument(_svg);
+    convertString: function (svg) {
+        return this.convertDom(new xmldoc.XmlDocument(svg));
+    },
 
+    convertDom: function (_dom) {
+        // parse and flatten source svg
         var dom = svgflatten(_dom)
           .pathify()
           .flatten()
