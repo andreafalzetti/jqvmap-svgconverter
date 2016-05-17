@@ -16,8 +16,8 @@ module.exports = {
         var vmapWidth, vmapHeight;
 
         if (dom.attr.width && dom.attr.height) {
-            vmapWidth = dom.attr.width;
-            vmapHeight = dom.attr.height;
+            vmapWidth = parseInt(dom.attr.width, 10);
+            vmapHeight = parseInt(dom.attr.height, 10);
         } else {
             vmapWidth = Math.ceil(dom.attr.viewBox.split(" ")[2]);
             vmapHeight = Math.ceil(dom.attr.viewBox.split(" ")[3]);
