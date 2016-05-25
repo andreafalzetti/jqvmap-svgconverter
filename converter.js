@@ -30,7 +30,8 @@ module.exports = {
             if (path.name !== "path" || !path.attr.d) {
                 return;
             }
-            vmapPaths["path-" + i] = {
+            var key = path.attr.id ? path.attr.id : "_path" + i;
+            vmapPaths[key] = {
                 path: path.attr.d,
                 name: path.attr.title || null,
                 class: path.attr.class || null
