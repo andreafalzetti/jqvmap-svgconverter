@@ -20,9 +20,12 @@ module.exports = {
         if (dom.attr.width && dom.attr.height) {
             vmapWidth = parseInt(dom.attr.width, 10);
             vmapHeight = parseInt(dom.attr.height, 10);
-        } else {
+        } else if (dom.attr.viewBox) {
             vmapWidth = Math.ceil(dom.attr.viewBox.split(" ")[2]);
             vmapHeight = Math.ceil(dom.attr.viewBox.split(" ")[3]);
+        } else {
+            console.log(dom);
+            throw new Error("Cannot handle this dom element");
         }
 
         var vmapPaths = {};
