@@ -6,15 +6,16 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "alex-pex",
-  "license": "ISC",
   "dependencies": {
-    "svg-flatten": "file:../svg-flatten",
+    "svg-flatten": "^1.0.0",
     "xmldoc": "^0.5.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-properties": "^1.2.1",
     "mocha": "^2.4.5"
-  }
+  },
+  "author": "alex-pex",
+  "license": "ISC",
+  "repository": "stadline/jqvmap-svgconverter"
 }
